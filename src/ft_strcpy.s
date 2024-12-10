@@ -15,6 +15,5 @@ section .text
 		jmp _while
 
 	_end:
-		mov BYTE [rdi + rax], 0x0 ; add the null terminator
 		mov rax, rsi
 		ret
