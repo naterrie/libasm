@@ -1,4 +1,4 @@
-*.o
+.objs
 *.a
-world.s
+*.txt
 run
