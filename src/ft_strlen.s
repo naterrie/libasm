@@ -4,7 +4,7 @@ section .text
 	global ft_strlen
 
 	ft_strlen:
-		mov rax, 0 ; counter
+		xor rax, rax ; counter
 
 	_while:
 		cmp BYTE [rdi + rax], 0x0 ; check if the current character is the null terminator

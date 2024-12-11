@@ -31,5 +31,11 @@ int main()
 	char *str = "Hello";
 	char dest[6];
 	printf("Copy : %s\n", ft_strcpy(dest, str));
+
+	// Test ft_strcmp
+	printf("Compare : %d\n", ft_strcmp("Hello", "Hello"));
+	printf("Compare : %d\n", ft_strcmp("Hello", "Hell"));
+	printf("Compare : %d\n", strcmp("Hello", "Hell"));
+
 	return 0;
 }
