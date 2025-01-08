@@ -2,7 +2,8 @@ SRCS =	ft_strlen.s\
 		ft_read.s \
 		ft_write.s \
 		ft_strcpy.s \
-		ft_strcmp.s
+		ft_strcmp.s \
+		ft_strdup.s
 
 DIR = src
 DIR_OBJS = .objs

@@ -18,11 +18,6 @@ section .text
 		jmp _while
 
 	_end:
-		cmp al, dl			; Compare the last characters
-		jl _less			; if s1 < s2
-		mov rax, 1		; Mov with zero extend
-		ret
-
-	_less:
-		mov rax, -1		; Mov with sign extend
+		sub al, dl			; Subtract characters
+		movsx rax, al		; Mov with zero extend
 		ret

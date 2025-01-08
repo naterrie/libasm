@@ -6,6 +6,7 @@
 
 size_t	ft_strlen(char *str);
 char	*strdup(const char *s);
+char	*ft_strdup(const char *s);
 char	*ft_strcpy(char *dest, const char *src);
 ssize_t	ft_read(int fd, void *buf, size_t count);
 int		ft_strcmp(const char *s1, const char *s2);
@@ -13,7 +14,6 @@ ssize_t	ft_write(int fd, const void *buf, size_t count);
 
 int main()
 {
-
 	// Test ft_strlen
 	char buf[5];
 	printf("Len : %ld\n", ft_strlen("Helloooo"));
@@ -34,11 +34,20 @@ int main()
 	printf("Copy : %s\n", ft_strcpy(dest, str));
 
 	// Test ft_strcmp
-	printf("Compare : %d\n", ft_strcmp("Hello", "Hello"));
-	printf("F Compare : %d\n", ft_strcmp("Hell", "Hello"));
-	printf("T Compare : %d\n", strcmp("Hell", "Hello"));
-	printf("F Compare : %d\n", ft_strcmp("Hello", "Hell"));
-	printf("T Compare : %d\n", strcmp("Hello", "Hell"));
+	char si[64] = "Hello";
+	char se[64] = "Hell";
+	printf("Compare : %d\n", ft_strcmp(si, si));
+	printf("F Compare : %d\n", ft_strcmp(se, si));
+	printf("T Compare : %d\n", strcmp(se, si));
+	printf("F Compare : %d\n", ft_strcmp(si, se));
+	printf("T Compare : %d\n", strcmp(si, se));
+
+	//Test ft_strdup
+	char *str2 = "Hello";
+	char *str3 = strdup(str2);
+	char *str4 = ft_strdup(str2);
+	printf("Dup : %s\n", str3);
+	printf("F Dup : %s\n", str4);
 
 	return 0;
 }
