@@ -5,6 +5,7 @@
 #include <errno.h>
 
 size_t	ft_strlen(char *str);
+char	*strdup(const char *s);
 char	*ft_strcpy(char *dest, const char *src);
 ssize_t	ft_read(int fd, void *buf, size_t count);
 int		ft_strcmp(const char *s1, const char *s2);
@@ -34,8 +35,10 @@ int main()
 
 	// Test ft_strcmp
 	printf("Compare : %d\n", ft_strcmp("Hello", "Hello"));
-	printf("Compare : %d\n", ft_strcmp("Hello", "Hell"));
-	printf("Compare : %d\n", strcmp("Hello", "Hell"));
+	printf("F Compare : %d\n", ft_strcmp("Hell", "Hello"));
+	printf("T Compare : %d\n", strcmp("Hell", "Hello"));
+	printf("F Compare : %d\n", ft_strcmp("Hello", "Hell"));
+	printf("T Compare : %d\n", strcmp("Hello", "Hell"));
 
 	return 0;
 }
