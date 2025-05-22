@@ -10,7 +10,7 @@ DIR_OBJS = .objs
 
 OBJS = $(addprefix $(DIR_OBJS)/, $(SRCS:.s=.o))
 
-CFLAGS = #-Wall -Wextra -Werror
+CFLAGS = -Wall -Wextra -Werror
 
 NAME = libasm.a
 
@@ -35,7 +35,7 @@ fclean: clean
 re: fclean all
 
 run: all
-	gcc $(CFLAGS) .c $(NAME) -o run
+	gcc $(CFLAGS) main.c $(NAME) -o run
 	./run
 
 .PHONY: all clean fclean re
